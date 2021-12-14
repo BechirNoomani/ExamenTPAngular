@@ -1,0 +1,11 @@
+<div id="center">
+    <h2 id="h2">Posts</h2>
+<ul class="list-group">
+<app-post-list-item-componant *ngFor=" let blog of blogs"
+[BlogName]="blog.name"
+[BlogContent]="blog.content"
+[BlogItslove]="blog.loveits">
+
+</app-post-list-item-componant>
+</ul>
+</div>

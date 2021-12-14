@@ -1,0 +1,14 @@
+<li [ngClass]="{ 'list-group-item':true,
+'list-group-item-success': BlogItslove > 0,
+ 'list-group-item-danger' : BlogItslove < 0
+} " >
+    <h4>{{BlogName}}</h4>
+    <p>{{BlogContent}}</p>
+    <button type="button" class="btn btn-success" id="btn-r" (click)=" pluslove ()" >
+       Love it <span class="badge rounded-pill bg-light text-dark" *ngIf=" BlogItslove > 0">{{BlogItslove}}</span>
+      </button>
+      <button type="button" class="btn btn-danger" (click)="moinslove()" >
+        Dont Love it <span class="badge rounded-pill bg-light text-dark" *ngIf=" BlogItslove < 0">{{-BlogItslove}}</span>
+      </button>
+</li>
+
